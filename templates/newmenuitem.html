@@ -1,0 +1,18 @@
+<html>
+    <head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>({{restaurant.id}}). New Menu Item for {{restaurant.name}}</h1>
+    <form method="POST" action="{{url_for('newMenuItem',restaurant_id = restaurant.id)}}">
+        <b><label for="inputName" >Name: </label></b>
+        <input id="inputName" type="text" name="name" value ="" /><br>
+        <b><label for="inputDescritpion">Description: </label></b>
+        <input id="inputDescritpion" type="text" name="description" value ="" /><br>
+        <b><label for="inputPrice">Price: </label></b>
+        <input id="inputPrice" type="text" name="price" value ="" /><br>
+        <input type="submit" value="Go!"/>
+    </form>
+    <a href="{{url_for('list_restaurant', restaurant_id = restaurant.id)}}">voltar para lista do restaurante {{restaurant.name}} </a>
+</body>
+</html>

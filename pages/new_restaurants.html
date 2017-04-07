@@ -3,14 +3,14 @@
         <h2>Restaurant Add Form</h2>
 
         <div>
-            <form method="post" action="/restaurant/new">
+            <form method="post" action="/restaurant/new" enctype="multipart/form-data">
                 <label for="name"> Name:<label>
-                <input id="name" type="text" value="">             
+                <input id="name" name="name" type="text" value="">             
                 
                 <input type="submit" value="Submit">
             </form>
         </div>
 
-        <a href="restaurants.html"> back to list </a>
+        <a href="/restaurants"> back to list </a>
     </body>
 </html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+    <h2>({{restaurant.id}}). New Menu Item for {{restaurant.name}}</h1>
+    <form method="POST" action="{{url_for('editMenuItem',restaurant_id = restaurant.id, menu_id = item.id)}}">
+        <b><label for="inputName" >Name: </label></b>
+        <input id="inputName" type="text" name="name" value ="{{item.name}}" /><br>
+        <b><label for="inputDescritpion">Description: </label></b>
+        <input id="inputDescritpion" type="text" name="description" value ="{{item.description}}" /><br>
+        <b><label for="inputPrice">Price: </label></b>
+        <input id="inputPrice" type="text" name="price" value ="{{item.price}}" /><br>
+        <input type="submit" value="Go!"/>
+    </form>
+    <a href="{{url_for('list_restaurant', restaurant_id = restaurant.id)}}">voltar para lista do restaurante {{restaurant.name}} </a>
+</body>
+</html>
